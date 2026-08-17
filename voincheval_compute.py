@@ -63,7 +63,7 @@ def main():
         )
 
         st.write("Tarifs : ")
-        st.dataframe(prices_data, width='stretch')
+        st.table(prices_data)
 
 if __name__ == "__main__":
     main()
