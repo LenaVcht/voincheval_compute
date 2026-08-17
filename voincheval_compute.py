@@ -31,13 +31,15 @@ def main():
     Tous les ans, on se fait chier à faire des calculs, ça fait mal à la tête et c'est long, alors cette année on innove. Laissez-moi vous présenter le **super-calculateur-de-qui-doit-quoi-à-Julie !!!**
     """)
 
-    st.info("Tout d'abord, entrons les informations inportantes (le prix des courses, le nombre de personnes présente un seul soir, ou les deux, et celleux qui ont consommé de l'alcool).")
+    st.info("Tout d'abord, entrons les informations inportantes (le prix des courses, le nombre de personnes présentes un seul soir, ou les deux, et celleux qui ont consommé de l'alcool).")
 
     with st.container(border=True) :
         # Groceries price input
-        groceries_price = float(st.number_input("Combien ont coûté les courses cette année ?", 0, value=400, width=400))
+        st.caption("Combien ont coûté les courses cette année ?")
+        groceries_price = float(st.number_input("Prix des courses", 0, value=400, width=400, label_visibility="collapsed"))
 
         # Number of people input
+        st.caption("Combien de personnes étaient présentes ?")
         people_data = [{
             "1 jour": 10,
             "Alcool - 1 jour": 5,
